@@ -5,7 +5,8 @@ library(shiny)
 fluidPage(
   
   tags$head(
-    tags$link(href="styles.css",rel="stylesheet",type="text/css")
+    tags$link(href="styles.css",rel="stylesheet",type="text/css"),
+    includeHTML(path = "file/google-analytics.html")
   ),
   
   tags$div(

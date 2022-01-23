@@ -7,8 +7,8 @@ function(input, output, session) {
   start <- callModule(module = welcome, id = "Welcome")
   timer <- callMOdule(module = time, id="timer", start = start)
   
-  square_png <- sample(list.files(path = "file/square images/", pattern = "jpeg$"), n_square)
-  square_png <- sample(rep(square_png, 2))
+  square_jpeg <- sample(list.files(path = "file/square images/", pattern = "jpeg$"), n_square)
+  square_jpeg <- sample(rep(square_jpeg, 2))
   
   output_mods <- reactiveValues()
   output_mods_parse <- reactiveValues(all = NULL, show1 = NULL, show2 = NULL, show3 = NULL)
@@ -21,7 +21,7 @@ function(input, output, session) {
       output_mods[[paste0("module", x)]] <- callModule(
         module = square,
         id = paste0("module", x),
-        square_logo = square_png[x],
+        square_logo = square_jpeg[x],
         reset = reset,
         block = block
       )
