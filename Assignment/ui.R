@@ -2,7 +2,7 @@
 
 library(shiny)
 
-shinyUI(fluidPage(
+fluidPage(
   
   tags$head(
     tags$link(href="styles.css",rel="stylesheet",type="text/css")
@@ -33,4 +33,4 @@ shinyUI(fluidPage(
     ),
   )
   
-))
+)
