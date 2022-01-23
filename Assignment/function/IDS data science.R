@@ -23,7 +23,7 @@ which_show <- function(l, indice = NULL){
 
 filter_found <- function(l) {
   found <- unlist(lapply(l, `[[`, "found"), use.names = FALSE)
-  l(!found)
+  l[!found]
 }
 
 all_found <- function(l) {
