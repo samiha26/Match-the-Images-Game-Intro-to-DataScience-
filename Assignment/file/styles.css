@@ -1,0 +1,43 @@
+
+body{
+  
+  min-height: 150%;
+  width: 150%;
+  position: absolute;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  
+  background-size: cover;
+  background: -moz-radial-gradient(circle at center, #F7FFFD, #42cab3) fixed;
+  background: -webkit-radial-gradient(circle at center, #F7FFFD, #42cab3) fixed);
+  background: -ms-radial-gradient(circle at center, #F7FFFD, #42cab3) fixed);
+  background: -o-radial-gradient(circle at center, #F7FFFD, #42cab3) fixed);
+  background: -radial-gradient(circle at center, #F7FFFD, #42cab3) fixed);
+  
+}
+
+.title-app{
+  
+  text-align: center;
+  width: 150% ;
+  margin-top: 50px;
+}
+
+h1{
+  font-weight: bold;
+  
+}
+
+.shiny-notification-message{
+  color: #fff !important;
+  background-color: #06859c !important;
+  border: 1px solid #06859c !important;
+}
+
+#shiny-notification-panel{
+  
+  width: 400px !important;
+  text-align: center !important;
+}
