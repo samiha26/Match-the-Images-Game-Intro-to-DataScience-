@@ -4,7 +4,7 @@ square_UI <- function(id){
   
   ns <- NS(id)
   tagList(
-    image_output(
+    imageOutput(
       outputId = ns("square"),
       click = clickOpts(id = ns("square_click"), clip = FALSE),
       width = 120,
