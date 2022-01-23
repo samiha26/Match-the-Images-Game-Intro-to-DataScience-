@@ -2,7 +2,7 @@
 
 square_UI <- function(id){
   
-  ns < NS(id)
+  ns <- NS(id)
   tagList(
     image_output(
       outputId = ns("square"),

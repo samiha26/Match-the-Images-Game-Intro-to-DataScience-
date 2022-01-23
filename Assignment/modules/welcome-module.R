@@ -1,7 +1,7 @@
 # welcome-module.R
 
 welcomeModule_UI <- function(id) {
-  ns<-NS(id)
+  ns <- NS(id)
   modalDialog(
     title = tags$h1(
       style = "text-align: center;",
