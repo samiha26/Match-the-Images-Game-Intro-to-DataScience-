@@ -1,33 +1,33 @@
 # utiils ------------------------------------
 
-which_shows <- function(random, indice = NULL){
-  random <- filter_found(random)
-  if (length(random) == 0){
+which_show <- function(l, indice = NULL){
+  l <- filter_found(l)
+  if (length(l) == 0){
     return(NULL)
   }
   
-  result <- lapply(random, '[[', "show")
-  result <- unlist (result)
-  if (all(!result)) {
+  res <- lapply(l, `[[`, "show")
+  res <- unlist (res)
+  if (all(!res)) {
     return(NULL)
   }
-  timeSystem <- unlist(lapply(random[result], '{{', "timeSystem"), use.names = FALSE)
-  result <- names(random)[result]
-  result <- result[order(timeSystem, decreasing = FALSE)]
+  timeSystem <- unlist(lapply(l[res], `[[`, "timeSystem"), use.names = FALSE)
+  res <- names(l)[res]
+  res <- res[order(timeSystem, decreasing = FALSE)]
   if (is.null(indice)){
-    result
+    res
   } else {
-    as_null(result[indice])
+    as_null(res[indice])
   }
 }
 
-filter_finding <- function(random) {
-  found <- unlist(lapply(random, '[[', "found"), use.names = FALSE)
-  random(!found)
+filter_found <- function(l) {
+  found <- unlist(lapply(l, `[[`, "found"), use.names = FALSE)
+  l(!found)
 }
 
-all_finding <- function(random) {
-  found <- unlist(lapply(random, '[[', "found"), use.names = FALSE)
+all_found <- function(l) {
+  found <- unlist(lapply(l, `[[`, "found"), use.names = FALSE)
   all(found)
 }
 
@@ -39,7 +39,7 @@ as_null <- function(x) {
   }
 }
 
-which_square <- function(random, module) {
-  result <- lapply(module, function(x) random[[x]]$square)
-  unlist(result, use.names = FALSE)
+which_square <- function(l, module) {
+  res <- lapply(module, function(x) l[[x]]$square)
+  unlist(res, use.names = FALSE)
 }

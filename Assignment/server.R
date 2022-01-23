@@ -5,7 +5,7 @@ library(shiny)
 function(input, output, session) {
   
   start <- callModule(module = welcome, id = "Welcome")
-  timer <- callMOdule(module = time, id="timer", start = start)
+  timer <- callModule(module = time, id="timer", start = start)
   
   square_jpeg <- sample(list.files(path = "file/square images/", pattern = "jpeg$"), n_square)
   square_jpeg <- sample(rep(square_jpeg, 2))
@@ -34,9 +34,9 @@ function(input, output, session) {
      FUN = reactiveValuesToList
    )
    output_mods_parse$all <- op_mod
-   output_mods_parse$show1 <- which_shows(op_mod, 1)
-   output_mods_parse$show2 <- which_shows(op_mod, 2)
-   output_mods_parse$show3 <- which_shows(op_mod, 3)
+   output_mods_parse$show1 <- which_show(op_mod, 1)
+   output_mods_parse$show2 <- which_show(op_mod, 2)
+   output_mods_parse$show3 <- which_show(op_mod, 3)
     }
   )
   
