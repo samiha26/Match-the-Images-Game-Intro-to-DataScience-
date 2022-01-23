@@ -43,7 +43,7 @@ function(input, output, session) {
   observeEvent(output_mods_parse$show2, {
     square1 <- which_square(output_mods_parse$all, output_mods_parse$show1)
     square2 <- which_square(output_mods_parse$all, output_mods_parse$show2)
-    if(identical(sqaure1, square2)){
+    if(identical(square1, square2)){
       block$x <- square1
       showNotification(
         ui = tags$div(
@@ -59,7 +59,7 @@ function(input, output, session) {
   })
   
   observeEvent(output_mods_parse$show3, {
-    reset$x <- which_sqaure(
+    reset$x <- which_square(
       output_mods_parse$all,
       c(output_mods_parse$show1, output_mods_parse$show2)
     )
