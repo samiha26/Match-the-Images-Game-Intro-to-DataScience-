@@ -21,7 +21,7 @@ shinyUI(fluidPage(
   tags$div(
     
     style = "width: 650px; margin: auto;",
-    n_square <- 10,
+    
     
     time_UI("timer"),
     tags$br(),

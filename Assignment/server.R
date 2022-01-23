@@ -4,10 +4,10 @@ library(shiny)
 
 function(input, output, session) {
   
-  start <- callModule(module = welcome, id = "Welcome!")
+  start <- callModule(module = welcome, id = "Welcome")
   timer <- callMOdule(module = time, id="timer", start = start)
   
-  square_png <- sample(list.files(path = "E:/UNIVERSITY OF MALAYA/WIA1007Assignment/", pattern = "JPEG$"), n_square)
+  square_png <- sample(list.files(path = "file/square images/", pattern = "JPEG$"), n_square)
   square_png <- sample(rep(square_png, 2))
   
   output_mods <- reactiveValues()
@@ -47,7 +47,7 @@ function(input, output, session) {
       block$x <- square1
       showNotification(
         ui = tags$div(
-          style = "font-size: 150%; font-weight: bold;",
+          style = "font-size: 160%; font-weight: bold;",
           sample(
             x = c("That's A Match!", "Hooray!", "Good Job!", "Well Done!",
                   "Bravo!", "Great!", "Amazing!"),

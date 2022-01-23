@@ -1,8 +1,8 @@
 #  ------------------------------------------------------------------------
 #
-# Title : Memory Hex - Global
-#    By : dreamRs
-#  Date : 2019-02-06
+# Title : Visual Recall Game - Global
+#    By : Group I
+#  Date : 23 - 01 - 2022
 #    
 #  ------------------------------------------------------------------------
 
@@ -17,22 +17,22 @@ library("glue")
 
 # Modules -----------------------------------------------------------------
 
-source("E:/UNIVERSITY OF MALAYA/WIA1007Assignment/Visual-Recall-Game/module/hex-module.R")
-source("E:/UNIVERSITY OF MALAYA/WIA1007Assignment/Visual-Recall-Game/module/time-module.R")
-source("E:/UNIVERSITY OF MALAYA/WIA1007Assignment/Visual-Recall-Game/module/welcome-module.R")
+source("modules/square-module.R")
+source("modules/time-module.R")
+source("modules/welcome-module.R")
 
 
 
 
-# Functions ---------------------------------------------------------------
+# Function ---------------------------------------------------------------
 
-source("E:/UNIVERSITY OF MALAYA\WIA1007/Assignment/Visual-Recall-Game/IDS data science.R")
+source("function/IDS data science.R")
 
 
 
 # Global variables --------------------------------------------------------
 
-n_square <<- 10
+n_square <- 10
 
 
 

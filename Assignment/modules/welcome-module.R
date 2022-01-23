@@ -1,6 +1,6 @@
 # welcome-module.R
 
-welcomeModule_ui <- function(id) {
+welcomeModule_UI <- function(id) {
   ns<-NS(id)
   modalDialog(
     title = tags$h1(
@@ -26,9 +26,10 @@ welcomeModule_ui <- function(id) {
 }
 
 welcome <- function(input, output, session) {
-  id <- gsub("-$", "", session$n(""))
-  showModal(ui = welcomeModule_ui(id))
-  event(input$play, {
+  id <- gsub("-$", "", session$ns(""))
+  showModal(ui = welcomeModule_UI(id))
+  
+  observeEvent(input$play, {
     removeModal()
   })
   return(reactive(input$play))

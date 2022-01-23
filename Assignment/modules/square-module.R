@@ -6,9 +6,9 @@ square_UI <- function(id){
   tagList(
     image_output(
       outputId = ns("square"),
-      click = click_options(id = ns("square_click"), clip = FALSE),
-      width = 110,
-      height = 130,
+      click = clickOpts(id = ns("square_click"), clip = FALSE),
+      width = 120,
+      height = 139,
       inline = TRUE
       
     )
@@ -55,9 +55,9 @@ square <- function(input, output, session, square_logo,
       
       list(
         
-        src = "E:/UNIVERSITY OF MALAYA/WIA1007Assignment/3.JPEG",
-        width = 110,
-        height = 130,
+        src = "file/3.JPEG",
+        width = 120,
+        height = 139,
         contentType = "image/JPEG"
         
       )
@@ -65,9 +65,9 @@ square <- function(input, output, session, square_logo,
       
       list(
         
-        src = paste0("E:/UNIVERSITY OF MALAYA/WIA1007Assignment/", square_logo),
-        width = 110,
-        height = 130,
+        src = paste0("file/square images/", square_logo),
+        width = 120,
+        height = 139,
         contentType = "image/JPEG"
         
       )
