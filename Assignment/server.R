@@ -7,7 +7,7 @@ function(input, output, session) {
   start <- callModule(module = welcome, id = "Welcome")
   timer <- callMOdule(module = time, id="timer", start = start)
   
-  square_png <- sample(list.files(path = "file/square images/", pattern = "JPEG$"), n_square)
+  square_png <- sample(list.files(path = "file/square images/", pattern = "jpeg$"), n_square)
   square_png <- sample(rep(square_png, 2))
   
   output_mods <- reactiveValues()

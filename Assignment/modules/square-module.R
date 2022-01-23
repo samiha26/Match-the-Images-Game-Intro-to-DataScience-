@@ -55,10 +55,10 @@ square <- function(input, output, session, square_logo,
       
       list(
         
-        src = "file/3.JPEG",
+        src = "file/3.jpeg",
         width = 120,
         height = 139,
-        contentType = "image/JPEG"
+        contentType = "image/jpeg"
         
       )
     }else{
@@ -68,7 +68,7 @@ square <- function(input, output, session, square_logo,
         src = paste0("file/square images/", square_logo),
         width = 120,
         height = 139,
-        contentType = "image/JPEG"
+        contentType = "image/jpeg"
         
       )
     }
