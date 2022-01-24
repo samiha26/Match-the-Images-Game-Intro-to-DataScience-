@@ -16,9 +16,13 @@ fluidPage(
 
     class = "title-app",
     style = "text-align: center;",
+    tags$h1(
+            tags$span(icon("brain") ,style = "color: #FFE5B4"),
+            "Visual Recall Game",
+            tags$span(icon("brain") ,style = "color: #FFE5B4")),
     
+    <h2>How to Change Font Type in HTML [Inline CSS]</h2>,
     
-    tags$h1("Visual Recall Game"),
     tags$h4("Match all the pictures and words!!")
   ),
   tags$br(),

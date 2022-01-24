@@ -77,9 +77,9 @@ function(input, output, session) {
         tags$div(
           style = "text-align: center;",
           tags$h2(
-            tags$span(icon("trophy"), style = "color: #9BE8E7"),
+            tags$span(icon("trophy-alt"), style = "color: #9BE8E7"),
             "That's A Match!",
-            tags$span(icon("trophy"), style = "color: #9BE8E7")
+            tags$span(icon("trophy-alt"), style = "color: #9BE8E7")
           ),
           tags$h4("You've found all matching squares in"),
           tags$h1(isolate(timer()), "Seconds!"),
