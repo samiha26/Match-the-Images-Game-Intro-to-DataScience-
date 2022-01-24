@@ -1,9 +1,10 @@
 #    http://shiny.rstudio.com/
 
 library(shiny)
+library(shinythemes)
 
 fluidPage(
-  
+  theme = shinytheme("slate"),
   tags$head(
     tags$link(href="styles.css",rel="stylesheet",type="text/css"),
     tags$script(src = "http://platform.twitter.com/widgets.js"),
