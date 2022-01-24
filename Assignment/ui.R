@@ -11,10 +11,10 @@ fluidPage(
     includeHTML(path = "file/google-analytics.html")
   ),
   
+  # Setting alignment, additional icon, icon color, and game title in the heading.
+  
   tags$div(
     
-    
-
     class = "title-app",
     style = "text-align: center;",
     tags$h1(
@@ -28,6 +28,7 @@ fluidPage(
   ),
   tags$br(),
 
+  # creating a timer that counts seconds.
   
   tags$div(
     
