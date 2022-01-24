@@ -12,7 +12,7 @@ time_UI <- function(id){
 
 time <- function(input, output, session, start = reactive(0)){
   
-  time_reactive <- reactiveVal(value = 0)
+  time_reactive <- reactiveVal(value = 10)
   started <- reactiveVal(value = FALSE)
   
   observeEvent(start(),{

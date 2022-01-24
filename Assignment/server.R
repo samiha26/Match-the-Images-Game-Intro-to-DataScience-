@@ -7,6 +7,7 @@ function(input, output, session) {
   start <- callModule(module = welcome, id = "Welcome")
   timer <- callModule(module = time, id="timer", start = start)
   
+  
   square_jpeg <- sample(list.files(path = "file/square images/", pattern = "jpeg$"), n_square)
   square_jpeg <- sample(rep(square_jpeg, 2))
   
@@ -47,7 +48,7 @@ function(input, output, session) {
       block$x <- square1
       showNotification(
         ui = tags$div(
-          style = "font-size: 160%; font-weight: bold;",
+          style = "font-size: 200%; font-weight: bold;",
           sample(
             x = c("That's A Match!", "Hooray!", "Good Job!", "Well Done!",
                   "Bravo!", "Great!", "Amazing!"),
@@ -96,6 +97,7 @@ function(input, output, session) {
       ))
     }
   })
+
   
   observeEvent(input$reload, {
     session$reload()

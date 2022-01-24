@@ -12,17 +12,22 @@ fluidPage(
   
   tags$div(
     
+    
+
     class = "title-app",
+    style = "text-align: center;",
+    
+    
     tags$h1("Visual Recall Game"),
     tags$h4("Match all the pictures and words!!")
   ),
   tags$br(),
-  
-  #Text output
+
   
   tags$div(
     
-    style = "width: 650px; margin: auto;",
+    
+    style = "width: 650px; margin: auto;text-align: center;",
     
     
     time_UI("timer"),
