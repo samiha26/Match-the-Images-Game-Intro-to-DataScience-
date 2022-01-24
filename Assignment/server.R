@@ -4,9 +4,10 @@ library(shiny)
 
 function(input, output, session) {
   
-  start <- callModule(module = welcome, id = "Welcome")
-  timer <- callModule(module = time, id="timer", start = start)
+  start <- callModule(module = welcome, id = "Welcome")         # calling welcome module to the server
+  timer <- callModule(module = time, id="timer", start = start) # calling time module to the server
   
+  # making the images interactive.
   
   square_jpeg <- sample(list.files(path = "file/square images/", pattern = "jpeg$"), n_square)
   square_jpeg <- sample(rep(square_jpeg, 2))
@@ -40,6 +41,8 @@ function(input, output, session) {
    output_mods_parse$show3 <- which_show(op_mod, 3)
     }
   )
+  
+  # making the squares identical, setting square style, setting game end note.
   
   observeEvent(output_mods_parse$show2, {
     square1 <- which_square(output_mods_parse$all, output_mods_parse$show1)
